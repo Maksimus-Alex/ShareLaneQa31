@@ -20,9 +20,9 @@ public class ZipCodeTest {
 
 @Test
     public void test() {
-    System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+
     WebDriver browser = new ChromeDriver(); // указываем что хотим работать с Chrome
-    browser.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     browser.get("https://www.sharelane.com/cgi-bin/register.py");
     browser.findElement(By.name("zip_code")).sendKeys("1234");
     browser.findElement(By.cssSelector("[value=Continue")).click();
