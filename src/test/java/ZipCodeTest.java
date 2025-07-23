@@ -31,14 +31,29 @@ public class ZipCodeTest {
 
     browser.quit();
     }
-
+@Test
     public void test2() {
 
         WebDriver browser = new ChromeDriver(); // указываем что хотим работать с Chrome
         browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         browser.get("https://www.sharelane.com/cgi-bin/register.py");
-        browser.findElement(By.name("zip_code")).sendKeys("1234");
+        browser.findElement(By.name("zip_code")).sendKeys("12345");
         browser.findElement(By.cssSelector("[value=Continue")).click();
+        // формально при правильно вводе мы знаем на какой URL нам надо пепейти
+    // соответвенно нам надо просто сравнить что наше оиждание совпадает с реальностью
+        String expURL = "https://www.sharelane.com/cgi-bin/register.py?page=1&zip_code=11111"; // Ожидание
+        /*
+        Функция getCurrentUrl() используется для получения текущего URL страницы в браузере.
+        В зависимости от контекста, она может возвращать полный URL, включая протокол, домен, путь и параметры,
+        либо относительный URL, который начинается после домена.
+         */
+        String actURL = browser.getCurrentUrl();// реальность
+        Assert.assertEquals(expURL,actURL);
+        /*
+        assertEquals используется для сравнения двух значений или объектов.
+         Если они не равны, это означает, что в коде есть ошибка, которую нужно исправить.
+         */
+    // не знаю как закончить
 
 
         browser.quit();
