@@ -19,7 +19,7 @@ public class ZipCodeTest {
      */
 
 @Test
-    public void test() {
+    public void test1() {
 
     WebDriver browser = new ChromeDriver(); // указываем что хотим работать с Chrome
     browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -30,5 +30,17 @@ public class ZipCodeTest {
     Assert.assertEquals(errorMessage, "Oops, error on page. ZIP code should have 5 digits");
 
     browser.quit();
+    }
+
+    public void test2() {
+
+        WebDriver browser = new ChromeDriver(); // указываем что хотим работать с Chrome
+        browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        browser.get("https://www.sharelane.com/cgi-bin/register.py");
+        browser.findElement(By.name("zip_code")).sendKeys("1234");
+        browser.findElement(By.cssSelector("[value=Continue")).click();
+
+
+        browser.quit();
     }
 }
