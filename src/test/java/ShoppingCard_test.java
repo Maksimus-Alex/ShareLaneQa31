@@ -27,9 +27,12 @@ public class ShoppingCard_test{
         driver.findElement(By.name("q")).clear();
         driver.findElement(By.name("q")).sendKeys("19");
         driver.findElement(By.cssSelector("[value=Update]")).click();
-        String discountPercent = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/table/tbody/tr[2]/td[5]/p/b")).getText();
-        String discountDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/table/tbody/tr[2]/td[6]")).getText();
-        String totalDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/table/tbody/tr[2]/td[7]")).getText();
+        String discountPercent = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/" +
+                "table/tbody/tr[2]/td[5]/p/b")).getText();
+        String discountDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/" +
+                "table/tbody/tr[2]/td[6]")).getText();
+        String totalDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/" +
+                "table/tbody/tr[2]/td[7]")).getText();
 
         softAssert.assertEquals(discountPercent, "0");
         softAssert.assertEquals(discountDollar, "0.0");
@@ -38,7 +41,7 @@ public class ShoppingCard_test{
         softAssert.assertAll();
     }
     @Test
-    public void checkDiscounttable2Precent(){
+    public void checkDiscounttable2Percent(){
 
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = new ChromeDriver(); // указываем что хотим работать с Chrome
@@ -57,9 +60,12 @@ public class ShoppingCard_test{
         driver.findElement(By.name("q")).clear();
         driver.findElement(By.name("q")).sendKeys("25");
         driver.findElement(By.cssSelector("[value=Update]")).click();
-        String discountPercent = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/table/tbody/tr[2]/td[5]/p/b")).getText();
-        String discountDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/table/tbody/tr[2]/td[6]")).getText();
-        String totalDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/table/tbody/tr[2]/td[7]")).getText();
+        String discountPercent = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/" +
+                "table/tbody/tr[2]/td[5]/p/b")).getText();
+        String discountDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/" +
+                "table/tbody/tr[2]/td[6]")).getText();
+        String totalDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/" +
+                "table/tbody/tr[2]/td[7]")).getText();
         softAssert.assertEquals(discountPercent, "2");
         softAssert.assertEquals(discountDollar, "5.0");
         softAssert.assertEquals(totalDollar, "250");
@@ -67,7 +73,7 @@ public class ShoppingCard_test{
         softAssert.assertAll();
     }
     @Test
-    public void checkDiscounttable3Precent(){
+    public void checkDiscounttable3Percent(){
 
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = new ChromeDriver(); // указываем что хотим работать с Chrome
@@ -86,10 +92,12 @@ public class ShoppingCard_test{
         driver.findElement(By.name("q")).clear();
         driver.findElement(By.name("q")).sendKeys("51");
         driver.findElement(By.cssSelector("[value=Update]")).click();
-        String discountPercent = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/table/tbody/tr[2]/td[5]/p/b")).getText();
-        String discountDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/table/tbody/tr[2]/td[6]")).getText();
-        String totalDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/table/tbody/tr[2]/td[7]")).getText();
-
+        String discountPercent = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/" +
+                "table/tbody/tr[2]/td[5]/p/b")).getText();
+        String discountDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/" +
+                "table/tbody/tr[2]/td[6]")).getText();
+        String totalDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/" +
+                "table/tbody/tr[2]/td[7]")).getText();
         softAssert.assertEquals(discountPercent, "3");
         softAssert.assertEquals(discountDollar, "15.3");
         softAssert.assertEquals(totalDollar, "510");
@@ -97,7 +105,7 @@ public class ShoppingCard_test{
         softAssert.assertAll();
     }
     @Test
-    public void checkDiscounttable4Precent() {
+    public void checkDiscounttable4Percent() {
 
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = new ChromeDriver(); // указываем что хотим работать с Chrome
@@ -116,10 +124,12 @@ public class ShoppingCard_test{
         driver.findElement(By.name("q")).clear();
         driver.findElement(By.name("q")).sendKeys("101");
         driver.findElement(By.cssSelector("[value=Update]")).click();
-        String discountPercent = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/table/tbody/tr[2]/td[5]/p/b")).getText();
-        String discountDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/table/tbody/tr[2]/td[6]")).getText();
-        String totalDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/table/tbody/tr[2]/td[7]")).getText();
-
+        String discountPercent = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/" +
+                "table/tbody/tr[2]/td[5]/p/b")).getText();
+        String discountDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/" +
+                "table/tbody/tr[2]/td[6]")).getText();
+        String totalDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/" +
+                "table/tbody/tr[2]/td[7]")).getText();
         softAssert.assertEquals(discountPercent, "4");
         softAssert.assertEquals(discountDollar, "40.4");
         softAssert.assertEquals(totalDollar, "1010");
