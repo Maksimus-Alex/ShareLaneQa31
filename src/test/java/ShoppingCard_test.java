@@ -6,10 +6,11 @@ import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 
-public class ShoppingCard_test{
+public class ShoppingCard_test {
+
 
     @Test
-    public void checkDiscount(){
+    public void checkDiscount() {
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = new ChromeDriver(); // указываем что хотим работать с Chrome
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -33,16 +34,16 @@ public class ShoppingCard_test{
                 "table/tbody/tr[2]/td[6]")).getText();
         String totalDollar = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[6]/td/" +
                 "table/tbody/tr[2]/td[7]")).getText();
-
         softAssert.assertEquals(discountPercent, "0");
         softAssert.assertEquals(discountDollar, "0.0");
         softAssert.assertEquals(totalDollar, "190");
         driver.quit();
         softAssert.assertAll();
     }
-    @Test
-    public void checkDiscounttable2Percent(){
 
+
+    @Test
+    public void checkDiscounttable2Percent() {
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = new ChromeDriver(); // указываем что хотим работать с Chrome
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -72,9 +73,10 @@ public class ShoppingCard_test{
         driver.quit();
         softAssert.assertAll();
     }
-    @Test
-    public void checkDiscounttable3Percent(){
 
+
+    @Test
+    public void checkDiscounttable3Percent() {
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = new ChromeDriver(); // указываем что хотим работать с Chrome
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -104,9 +106,10 @@ public class ShoppingCard_test{
         driver.quit();
         softAssert.assertAll();
     }
+
+
     @Test
     public void checkDiscounttable4Percent() {
-
         SoftAssert softAssert = new SoftAssert();
         WebDriver driver = new ChromeDriver(); // указываем что хотим работать с Chrome
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
