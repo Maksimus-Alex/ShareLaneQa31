@@ -41,7 +41,6 @@ public class ShoppingCard_test {
         softAssert.assertAll();
     }
 
-
     @Test
     public void checkDiscounttable2Percent() {
         SoftAssert softAssert = new SoftAssert();
@@ -73,7 +72,6 @@ public class ShoppingCard_test {
         driver.quit();
         softAssert.assertAll();
     }
-
 
     @Test
     public void checkDiscounttable3Percent() {
@@ -107,7 +105,6 @@ public class ShoppingCard_test {
         softAssert.assertAll();
     }
 
-
     @Test
     public void checkDiscounttable4Percent() {
         SoftAssert softAssert = new SoftAssert();
@@ -138,5 +135,6 @@ public class ShoppingCard_test {
         softAssert.assertEquals(totalDollar, "1010");
         driver.quit();
         softAssert.assertAll();
+
     }
 }
