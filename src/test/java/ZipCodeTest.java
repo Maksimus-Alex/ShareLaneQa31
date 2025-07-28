@@ -19,7 +19,7 @@ public class ZipCodeTest {
      */
 
 @Test
-    public void test1() {
+    public void checkZipCode4Digits() {
 
     WebDriver browser = new ChromeDriver(); // указываем что хотим работать с Chrome
     browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -32,7 +32,7 @@ public class ZipCodeTest {
     browser.quit();
     }
 @Test
-    public void test2() {
+    public void checkURLZipCode() {
 
         WebDriver browser = new ChromeDriver(); // указываем что хотим работать с Chrome
         browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
